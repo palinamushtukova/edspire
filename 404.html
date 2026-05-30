@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>не нашли — EdSpire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Caveat:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <style>
+    .nf {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .nf-code {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(6rem, 18vw, 12rem);
+      line-height: 0.9;
+      letter-spacing: -0.05em;
+      margin: 0;
+      color: var(--on-bg);
+    }
+    .nf-code .accent {
+      font-family: var(--handwritten);
+      font-weight: 500;
+      color: var(--ink);
+      font-size: 0.5em;
+      display: block;
+      transform: rotate(-3deg);
+      margin-top: -0.5rem;
+    }
+    .nf-text {
+      background: var(--card);
+      color: var(--ink);
+      border-radius: var(--radius);
+      padding: 1.5rem 2rem;
+      max-width: 480px;
+      margin: 2rem 0;
+      border: 2px solid var(--ink);
+    }
+    .nf-text p { margin: 0; font-size: 1.05rem; line-height: 1.55; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="/">
+        <span class="logo-pill">
+          <span class="logo-flame" aria-hidden="true"></span>
+          <span>edspire</span>
+        </span>
+      </a>
+      <nav class="site-nav">
+        <a href="/#lessons">уроки</a>
+        <a href="/about/">о проекте</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="nf">
+    <h1 class="nf-code">
+      404
+      <span class="accent">упс!</span>
+    </h1>
+
+    <div class="nf-text">
+      <p>
+        Этой страницы тут нет. Возможно, мы её ещё не написали,
+        а возможно — кто-то опечатался в адресе.
+      </p>
+    </div>
+
+    <a class="cta" href="/" style="background: var(--ink); color: var(--card); border-color: var(--ink);">
+      ← на главную
+    </a>
+  </main>
+</body>
+</html>
