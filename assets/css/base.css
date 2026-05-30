@@ -544,6 +544,7 @@ section { scroll-margin-top: var(--space-3); }
   .hero-card { padding: var(--space-3); }
   .subscribe-box,
   .about-teaser { padding: var(--space-3); }
+  .subscribe-box h2 { font-size: 1.55rem; line-height: 1.1; }
   .wrap { padding: 0 var(--space-2); }
 
   /* Eyebrow: при переносе строки pill разваливается → делаем прямоугольник */
