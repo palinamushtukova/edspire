@@ -54,6 +54,15 @@ body {
     linear-gradient(var(--grid) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid) 1px, transparent 1px);
   background-size: 48px 48px;
+
+  /* sticky footer: страница всегда не ниже экрана, футер прижат к низу */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 .wrap {
