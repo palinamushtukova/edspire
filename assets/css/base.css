@@ -542,6 +542,8 @@ section { scroll-margin-top: var(--space-3); }
 
 @media (max-width: 540px) {
   .hero-card { padding: var(--space-3); }
+  .subscribe-box,
+  .about-teaser { padding: var(--space-3); }
   .wrap { padding: 0 var(--space-2); }
 
   /* Eyebrow: при переносе строки pill разваливается → делаем прямоугольник */
@@ -775,4 +777,25 @@ p.why-item-num {
   .hero-cta, .hero-cta-secondary { justify-content: center; }
   .why-item { padding: var(--space-3); }
   .why-item-num { font-size: 2.2rem; }
+}
+
+/* ========================================
+   КНОПКИ НА МОБИЛКЕ
+   На узких экранах длинный текст в pill-кнопках переносился на две строки —
+   кнопка становилась слишком высокой и выглядела «толстой». На мобилке
+   показываем короткий вариант текста и делаем кнопки во всю ширину.
+   ======================================== */
+.txt-short { display: none; }
+
+@media (max-width: 540px) {
+  .txt-long { display: none; }
+  .txt-short { display: inline; }
+
+  .hero-cta,
+  .cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    padding: 0.75rem 1.2rem;
+  }
 }
