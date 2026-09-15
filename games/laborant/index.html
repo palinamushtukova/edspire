@@ -407,8 +407,27 @@
   </div>
 </div>
 
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database-compat.js"></script>
 <script>
 (function () {
+  /* -- Счётчик открытий страницы (та же Firebase-база, что у рейтингов уроков) -- */
+  try {
+    var FIREBASE_CONFIG = {
+      apiKey:            'AIzaSyDWMYLAA9ZxwhkzkpoXzn1ZqM302INp37E',
+      authDomain:        'edspire-67836.firebaseapp.com',
+      databaseURL:       'https://edspire-67836-default-rtdb.europe-west1.firebasedatabase.app',
+      projectId:         'edspire-67836',
+      storageBucket:     'edspire-67836.firebasestorage.app',
+      messagingSenderId: '153512354919',
+      appId:             '1:153512354919:web:0b7204e1e97168953be0c2'
+    };
+    if (!firebase.apps.length) firebase.initializeApp(FIREBASE_CONFIG);
+    var pvRef = firebase.database().ref('pageviews/laborant');
+    pvRef.child('log').push({ t: firebase.database.ServerValue.TIMESTAMP }).catch(function () {});
+    pvRef.child('count').transaction(function (c) { return (c || 0) + 1; }).catch(function () {});
+  } catch (e) {}
+
   var ARROW = {
     up: '<path d="M12 19V5"/><path d="M6 11l6-6 6 6"/>',
     down: '<path d="M12 5v14"/><path d="M6 13l6 6 6-6"/>',
